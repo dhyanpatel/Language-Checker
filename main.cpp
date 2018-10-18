@@ -126,7 +126,7 @@ int diffCheck(int language[LIMIT][2], int user[LIMIT][2]){
 
 int main()
 {
-    cout << "Program 3: Which Language\n"
+    cout << "Program 3: Which Language.\n"
             "  \n"
             "Select from the following stages of output to display:  \n"
             "   1. Letter frequency counts                           \n"
@@ -143,7 +143,7 @@ int main()
     int choice;
 
     cin >> choice;
-    cout << choice << endl;
+    //cout << choice << endl;
 
     int english[LIMIT][2];
     int finnish[LIMIT][2];
@@ -155,7 +155,7 @@ int main()
     int spanish[LIMIT][2];
     int userLang[LIMIT][2];
 
-    if (choice == 1 || choice == 3 || choice == 4){
+
         getFrequency(fileNames[0], english);
         getFrequency(fileNames[1], finnish);
         getFrequency(fileNames[2], french);
@@ -165,7 +165,7 @@ int main()
         getFrequency(fileNames[6], portuguese);
         getFrequency(fileNames[7], spanish);
 
-
+    if (choice == 1 || choice == 2 || choice == 3 || choice == 4){
         cout << "\nLetter Frequency Counts:" << endl;
         cout << "  " << setw(6) << "Engl";
         cout << setw(6) << "Finn";
@@ -188,7 +188,7 @@ int main()
             cout << setw(6) << spanish[i][0] << endl;
         }
     }
-    if (choice == 2 || choice == 3 || choice == 4) {
+
         bubble_sort(english, LIMIT);
         bubble_sort(finnish, LIMIT);
         bubble_sort(french, LIMIT);
@@ -198,7 +198,7 @@ int main()
         bubble_sort(portuguese, LIMIT);
         bubble_sort(spanish, LIMIT);
 
-
+    if (choice == 2 || choice == 3 || choice == 4) {
         cout << "\nLetter Frequency Order:" << endl;
         cout << "  " << setw(6) << "Engl";
         cout << setw(6) << "Finn";
@@ -286,7 +286,7 @@ int main()
             }
         }
 
-        cout << "This is in " << language << endl;
+        cout << "Language is " << language << endl;
     }
 
 
